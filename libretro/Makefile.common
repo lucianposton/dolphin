@@ -195,7 +195,6 @@ SOURCES_CXX += $(CORECOMMONDIR)/BreakPoints.cpp \
 					$(CORECOMMONDIR)/VersionLibretro.cpp \
 					$(CORECOMMONDIR)/Crypto/bn.cpp \
 					$(CORECOMMONDIR)/Crypto/ec.cpp \
-					$(CORECOMMONDIR)/Logging/ConsoleListener.cpp \
 					$(CORECOMMONDIR)/Logging/LogManager.cpp \
 					$(CORECOMMONDIR)/x64ABI.cpp \
 					$(CORECOMMONDIR)/x64Analyzer.cpp \
@@ -557,6 +556,12 @@ SOURCES_CXX += $(COREDIR)/Core/PowerPC/JitCommon/JitBackpatch.cpp \
 #libusb 
 #SOURCES_CXX += $(COREDIR)/Core/IPC_HLE/WII_IPC_HLE_Device_hid.cpp \
 					 $(COREDIR)/Core/HW/SI_GCAdapter.cpp
+
+# ConsoleListener - UNIX
+SOURCES_CXX += $(CORECOMMONDIR)/Logging/ConsoleListenerNix.cpp
+
+# ConsoleListener - Windows
+#SOURCES_CXX += $(CORECOMMONDIR)/Logging/ConsoleListenerWin.cpp
 
 # Unix-only
 SOURCES_CXX += $(COREDIR)/Core/HW/BBA-TAP/TAP_Unix.cpp
